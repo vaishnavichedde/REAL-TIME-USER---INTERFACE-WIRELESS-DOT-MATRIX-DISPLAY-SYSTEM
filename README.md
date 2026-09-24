@@ -64,7 +64,7 @@ LPC2148 ARM7 Microcontroller development environment
 The PDF specifically lists Embedded C Programming, Keil-C Compiler, and Flash Magic as the software requirements.
 
 ## Working of the Project
-Step 1: System Initialization
+## Step 1: System Initialization
 
 When the LPC2148 system is powered ON, the application initializes the required peripherals and display hardware.
 
@@ -78,7 +78,7 @@ ADC for LM35 temperature measurement.
 
 The application then reads the previously stored RUN/EDIT mode from EEPROM and performs the corresponding operation.
 
-Step 2: Bluetooth Communication
+## Step 2: Bluetooth Communication
 
 The HC-05 Bluetooth module provides wireless communication between the LPC2148 and an Android mobile phone.
 
