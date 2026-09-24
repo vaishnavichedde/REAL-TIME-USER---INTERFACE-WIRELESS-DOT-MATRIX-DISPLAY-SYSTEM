@@ -327,8 +327,6 @@ Real-time clock displays
 
 ## Future Improvements
 
-The PDF specifically proposes several future enhancements:
-
 Upgrade Bluetooth communication to Wi-Fi or IoT-based cloud connectivity.
 Enable remote control through a web or mobile application.
 Interconnect multiple display units to create larger scalable display boards.
