@@ -86,25 +86,25 @@ Instead of using a PC and HyperTerminal, the user operates the system through a 
 
 The user can send commands and menu selections wirelessly to the LPC2148 through the UART interface.
 
-Step 3: Display Menu
+## Step 3: Display Menu
 
 The system waits for the special character '!' from the Bluetooth terminal.
 
 When the character is received, the following menu is displayed:
 
-FIXED STRING
-FIXED STRING WITH BLINKING
-STRING WITH SCROLLING
-TIME DISPLAY
-RTC DISPLAY WITH SCROLLING
-TEMPERATURE DISPLAY
-TEXT EDIT MODE
-TIME EDIT MODE
-EXIT
+1.FIXED STRING
+2.FIXED STRING WITH BLINKING
+3.STRING WITH SCROLLING
+4.TIME DISPLAY
+5.RTC DISPLAY WITH SCROLLING
+6.TEMPERATURE DISPLAY
+7.TEXT EDIT MODE
+8.TIME EDIT MODE
+9.EXIT
 
 The user selects an option through the Bluetooth terminal, and the corresponding operation is executed on the dot-matrix display.
 
-Step 4: Fixed String Display
+## Step 4: Fixed String Display
 
 The system can display a fixed four-character string across the four 8×8 dot-matrix displays.
 
@@ -116,13 +116,13 @@ Each character can be displayed on a separate dot-matrix module.
 
 The implementation sequence in the PDF first requires displaying one character and then extending it to a four-character string.
 
-Step 5: Blinking String Display
+ ## Step 5: Blinking String Display
 
 The system can display the stored fixed string with a blinking effect.
 
 The first three display options use the string information stored in EEPROM and display it on the four 8×8 dot-matrix LED modules.
 
-Step 6: Scrolling String Display
+## Step 6: Scrolling String Display
 
 The system supports scrolling text longer than four characters.
 
@@ -134,7 +134,7 @@ The text moves across the four dot-matrix displays to create a scrolling effect.
 
 The PDF specifies that the scrolling implementation should support a string of more than 10 characters.
 
-Step 7: RTC Time Display
+## Step 7: RTC Time Display
 
 The LPC2148 on-chip RTC is used to display the current time.
 
@@ -149,7 +149,7 @@ MIN SEC
 
 The time can also be displayed in a scrolling format.
 
-Step 8: RTC Date and Time Scrolling
+## Step 8: RTC Date and Time Scrolling
 
 The complete RTC information can be converted into a string and displayed as scrolling text.
 
@@ -163,7 +163,7 @@ TIME: 09:30:23 DATE:17/04/2015 DAY: FRIDAY
 
 The system reads the required RTC registers and creates the complete date/time string before sending it to the existing scrolling display function.
 
-Step 9: Temperature Measurement Using LM35
+## Step 9: Temperature Measurement Using LM35
 
 The LM35 temperature sensor is connected to the LPC2148.
 
@@ -176,13 +176,11 @@ Converts the ADC reading into temperature.
 Updates the temperature periodically.
 Displays the temperature on the dot-matrix display.
 
-Example:
-
-30°C
+Example:30°C
 
 The PDF specifies that the temperature value should be updated periodically, such as every one second.
 
-Step 10: Text Editing
+## Step 10: Text Editing
 
 The user can edit display text through the Bluetooth terminal application.
 
@@ -202,7 +200,7 @@ Maximum:
 
 The two types of strings are stored at different EEPROM memory locations.
 
-Step 11: Time and Date Editing
+## Step 11: Time and Date Editing
 
 The user can also update the RTC time and date through the Bluetooth terminal.
 
@@ -276,7 +274,8 @@ Scrolling string
 
 When the system is powered ON, the application reads the stored mode from EEPROM and continues operation according to the saved mode.
 
-Project Flow
+## Project Flow
+
 Power ON
    ↓
 Initialize LPC2148
@@ -341,9 +340,11 @@ Implement LM35 temperature display.
 Implement text editing.
 Implement time/date editing.
 Integrate all functions into the final project.
+
 ## Hardware Project Output
 ![Project Block Diagram](Screenshot%202026-09-24%20170441.png)
-The system provides the following outputs:
+
+## The system provides the following outputs:
 
 Wireless control through Bluetooth.
 Fixed four-character display.
@@ -356,7 +357,8 @@ Editable fixed and scrolling text.
 Editable RTC time and date.
 EEPROM-based storage of configuration and display data.
 Real-time user interaction through an Android Bluetooth terminal.
-Applications
+
+## Applications
 
 Based on the project capabilities, possible applications include:
 
@@ -368,7 +370,8 @@ Temperature monitoring displays
 Educational embedded display systems
 Wireless programmable LED displays
 Real-time clock displays
-Future Improvements
+
+## Future Improvements
 
 The PDF specifically proposes several future enhancements:
 
