@@ -274,55 +274,9 @@ Scrolling string
 
 When the system is powered ON, the application reads the stored mode from EEPROM and continues operation according to the saved mode.
 
-## Project Flow
-
-Power ON
-   ↓
-Initialize LPC2148
-   ↓
-Initialize Dot Matrix Display
-   ↓
-Initialize UART
-   ↓
-Initialize EEPROM
-   ↓
-Initialize RTC
-   ↓
-Initialize ADC
-   ↓
-Read RUN/EDIT Mode from EEPROM
-   ↓
-Execute Selected Mode
-   ↓
-Wait for Bluetooth Input
-   ↓
-Receive '!'
-   ↓
-Display Menu
-   ↓
-Receive User Selection
-   ↓
- ┌───────────────────────────────┐
- │ 1. Fixed String               │
- │ 2. Blinking String            │
- │ 3. Scrolling String           │
- │ 4. Time Display               │
- │ 5. RTC Scrolling Display      │
- │ 6. Temperature Display        │
- │ 7. Text Edit                  │
- │ 8. Time Edit                  │
- │ 9. Exit                       │
- └───────────────────────────────┘
-   ↓
-Execute Selected Operation
-   ↓
-Update Dot Matrix Display
-   ↓
-Continue Monitoring
-
 This flow follows the project sequence described in the PDF.
 
-Project Implementation Sequence
+## Project Implementation Sequence
 
 The PDF recommends implementing the project step by step:
 
