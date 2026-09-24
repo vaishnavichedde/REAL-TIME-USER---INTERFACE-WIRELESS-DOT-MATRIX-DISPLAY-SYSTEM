@@ -24,7 +24,7 @@ Real-time interaction through an Android Bluetooth terminal application.
 The PDF specifies that EEPROM stores the current RUN/EDIT mode, fixed four-character string data, and scrolling string data.
 
 ## 📊 Project Block Diagram
-
+![Project Block Diagram](Screenshot%202026-09-24%20170110.png)
 
 The system consists of:
 
