@@ -341,8 +341,8 @@ Implement LM35 temperature display.
 Implement text editing.
 Implement time/date editing.
 Integrate all functions into the final project.
-Project Output
-
+## Hardware Project Output
+![Project Block Diagram](Screenshot%202026-09-24%20170441.png)
 The system provides the following outputs:
 
 Wireless control through Bluetooth.
